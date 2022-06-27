@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activites.MealActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:backgroundTint="@color/indigo_A100"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_230sdp">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/Collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:contentScrim="@color/yellow_300"
+            app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
+            app:title="Meal name"
+            app:collapsedTitleTextColor="@color/white_50"
+            app:expandedTitleTextColor="@color/white_50">
+
+            <ImageView
+                android:id="@+id/img_meal_details"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                app:layout_collapseMode="parallax"></ImageView>
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                app:layout_collapseMode="pin" />
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_float"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:backgroundTint="@color/yellow_400"
+        android:src="@drawable/ic_favorites"
+        app:layout_anchor="@id/appbar"
+        app:layout_anchorGravity="bottom|start"
+        app:tint="@color/white_50"
+        tools:ignore="SpeakableTextPresentCheck"></com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+        tools:ignore="SpeakableTextPresentCheck">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/linear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/tv_catogry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Catogry :  brief"
+                    android:textStyle="bold"
+                    android:drawableLeft="@drawable/ic_catogry"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/black_900"></TextView>
+
+                <TextView
+                    android:id="@+id/tv_area"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Area :Sudan"
+                    android:textStyle="bold"
+                    android:drawableLeft="@drawable/ic_location"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/black_900"></TextView>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_instructor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Instructor:"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="@font/myfont"
+                android:textColor="@color/black_900"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linear"
+              ></TextView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <ImageView
+        android:id="@+id/youtube"
+        android:layout_width="40dp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_gravity="bottom|center"
+        android:src="@drawable/youtube"
+        android:layout_marginBottom="@dimen/_10sdp"></ImageView>
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/progress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        app:layout_anchor="@id/appbar"
+        app:layout_anchorGravity="bottom"
+        android:visibility="gone"
+        ></com.google.android.material.progressindicator.LinearProgressIndicator>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

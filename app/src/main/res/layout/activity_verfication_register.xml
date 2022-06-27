@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:n="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    n:layout_width="match_parent"
+    n:layout_height="match_parent"
+    n:id="@+id/root"
+    n:background="@color/white_50"
+    tools:context=".activites.VerficationRegister">
+    <com.google.android.material.appbar.AppBarLayout
+        n:layout_width="match_parent"
+        n:layout_height="wrap_content"
+        n:theme="@style/Base.Theme.foodApp">
+
+        <androidx.appcompat.widget.Toolbar
+            n:id="@+id/toolbar"
+            app:title="تاكيد الدخول "
+            n:layout_width="match_parent"
+            n:layout_height="wrap_content"
+            n:background="?attr/colorPrimary"
+            app:popupTheme="@style/Base.Theme.foodApp" />
+    </com.google.android.material.appbar.AppBarLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
